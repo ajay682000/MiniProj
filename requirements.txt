@@ -1,6 +1,6 @@
 flask==1.1.2
 gunicorn
-opencv-python>=4.5.1
+opencv-python-headless
 keras>=2.4.3
 numpy>=1.19.2
 tensorflow-cpu
