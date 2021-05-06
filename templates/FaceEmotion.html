@@ -14,7 +14,22 @@
     </head>
     <body>
       <h1>Face Emotion Detection </h1>
-        <img id="bg" src="{{ url_for('video_feed') }}">
-        <script src="" async defer></script>
+        
+        <video autoplay="true" src="{{ url_for('video_feed') }}" id="videoElement">
+	
+	</video>
+    <script>
+    var video = document.querySelector("#videoElement");
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
+    </script>
     </body>
 </html>
